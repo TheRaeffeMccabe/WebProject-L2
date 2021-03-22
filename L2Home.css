@@ -4,6 +4,7 @@ html {
     background-image: url(Images/WebLayout%20Background.png);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
+/*    This is to place a background that is fixed */
 
 
 }
@@ -12,6 +13,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr 8fr;
     grid-template-rows: 1fr 1fr auto;
+/*    This is for our rid templates to put everything below in the correct area*/
+    
 
 }
 
@@ -24,6 +27,7 @@ p1 {
     height: 100px;
     font: Agency FB;
     border-radius: 8px;
+/*    This is for the first paragraph*/
 
 }
 
@@ -37,6 +41,7 @@ p2 {
     margin-right: 20px;
     height: 120px;
     border-radius: 8px;
+/*    This for the second paragraph*/
 
 }
 
@@ -48,12 +53,14 @@ Logo {
     width: 500px;
     margin: 10px;
     border-radius: 8px;
+/*    This is to display the Company Logo*/
 
 }
 
 .img-pm {
     height: 1000px;
     width: 1300px;
+/*    First Image*/
 
 }
 
@@ -62,6 +69,7 @@ Logo {
     grid-column: 2/3;
     padding: 20px;
     width: 400px;
+/*    Second Image*/
     
     
 }
@@ -74,6 +82,7 @@ Logo {
     padding: 20px;
     width: 800px;
     height: 300px;
+/*    Third Image*/
     
     
     
@@ -89,6 +98,7 @@ nav1 {
     width: 100px;
     background-color: #5569e7;
     border-radius: 8px;
+/*    This code is to navigate to the home Page/Refresh */
 
 
 }
@@ -102,5 +112,8 @@ nav2 {
     width: 100px;
     background-color: #8d645a;
     border-radius: 8px;
+/*    This code is for navigating to the ships Page*/
+
+ 
 
 }
