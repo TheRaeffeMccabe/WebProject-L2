@@ -1,0 +1,106 @@
+html {
+
+
+    background-image: url(Images/WebLayout%20Background.png);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr 8fr;
+    grid-template-rows: 1fr 1fr auto;
+
+}
+
+p1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background-color: #5569e7;
+    padding: 10px;
+    margin: 10px;
+    height: 100px;
+    font: Agency FB;
+    border-radius: 8px;
+
+}
+
+p2 {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    background-color: #8089e1;
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 120px;
+    border-radius: 8px;
+
+}
+
+Logo {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    background-color: #423ca6;
+    height: 260px;
+    width: 500px;
+    margin: 10px;
+    border-radius: 8px;
+
+}
+
+.img-pm {
+    height: 1000px;
+    width: 1300px;
+
+}
+
+.img-pn {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    padding: 20px;
+    width: 400px;
+    
+    
+}
+
+
+
+.img-pg {
+    grid-row: 3/4;
+    grid-column: 3/4;
+    padding: 20px;
+    width: 800px;
+    height: 300px;
+    
+    
+    
+}
+
+
+nav1 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin-top: 170px;
+    margin-left: 15px;
+    height: 60px;
+    width: 100px;
+    background-color: #5569e7;
+    border-radius: 8px;
+
+
+}
+
+nav2 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    margin-top: 170px;
+    margin-left: 130px;
+    height: 60px;
+    width: 100px;
+    background-color: #8d645a;
+    border-radius: 8px;
+
+}
