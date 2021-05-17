@@ -1,0 +1,70 @@
+<!doctype html>
+
+<head>
+    <title>Defiant Class</title>
+    <link rel="stylesheet" href="L2Home.css">
+    <link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+
+            font-family: 'Agency FB Bold', arial;
+            font-size: 25px;
+            color: gray;
+            
+        }
+
+    </style>
+
+</head>
+<script>
+    var items = [
+        ['Images/WebProduct Intrepid.png',29.99,'Product 1'],
+        ['Images/WebProduct Intrepid.png',19.99,'Product 2'],
+        ['Images/WebProduct Intrepid.png',19.99,'Product 3'],
+        ['Images/WebProduct Intrepid.png',19.99,'Product 4']
+    
+    ];
+        function run (){
+            var main = document.getElementById('products');
+
+            // elements needing to be added
+            for(var i = 0; i < items.length ; i++){
+
+
+            var ele = document.createElement('li');
+            var pic = document.createElement('img');
+            var price = document.createElement('h1');
+            var desc = document.createElement('h2');
+            var add = document.createElement('button');
+            var typeBox = document.createElement('input');
+
+
+
+            // Push elements into html
+            main.appendChild(ele);
+            ele.appendChild(pic);
+            ele.appendChild(price);
+            ele.appendChild(desc);
+            ele.appendChild(add);
+            ele.appendChild(typeBox);
+
+            //edit pusher elements info from array
+
+            pic.src = items[i][0];
+            price.innerHTML = '$' + items[i][1];
+            desc.innerHTML = items[i][2];
+            add.innerHTML = 'add';
+            typeBox.type = 'number';
+            }
+    }
+
+
+
+</script>
+<body onload="run()">
+    <ul id="products">
+    
+    
+    </ul>
+
+</body>
