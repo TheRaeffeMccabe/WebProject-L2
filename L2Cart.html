@@ -2,69 +2,109 @@
 
 <head>
     <title>Defiant Class</title>
-    <link rel="stylesheet" href="L2Home.css">
+    <link rel="stylesheet" href="L2Cart.css">
     <link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
     <style>
         body {
 
             font-family: 'Agency FB Bold', arial;
             font-size: 25px;
-            color: gray;
-            
-        }
+            color: white;
 
+        }
     </style>
+    
 
 </head>
 <script>
-    var items = [
-        ['Images/WebProduct Intrepid.png',29.99,'Product 1'],
-        ['Images/WebProduct Intrepid.png',19.99,'Product 2'],
-        ['Images/WebProduct Intrepid.png',19.99,'Product 3'],
-        ['Images/WebProduct Intrepid.png',19.99,'Product 4']
+     var items = [
+        ['Images/WebProduct Intrepid.png', 60000000000, 'Product 1'],
+        ['Images/WebProduct Defiant.png', 80000000000, 'Product 2'],
+        ['Images/WebProduct Luna.png', 7000000000, 'Product 3'],
     
+
     ];
-        function run (){
-            var main = document.getElementById('products');
 
-            // elements needing to be added
-            for(var i = 0; i < items.length ; i++){
+ var cartItems = [];
 
+ function run() {
+     var main = document.getElementById('products');
 
-            var ele = document.createElement('li');
-            var pic = document.createElement('img');
-            var price = document.createElement('h1');
-            var desc = document.createElement('h2');
-            var add = document.createElement('button');
-            var typeBox = document.createElement('input');
+     // elements needing to be added
+     for (var i = 0; i < items.length; i++) {
 
 
 
-            // Push elements into html
-            main.appendChild(ele);
-            ele.appendChild(pic);
-            ele.appendChild(price);
-            ele.appendChild(desc);
-            ele.appendChild(add);
-            ele.appendChild(typeBox);
 
-            //edit pusher elements info from array
-
-            pic.src = items[i][0];
-            price.innerHTML = '$' + items[i][1];
-            desc.innerHTML = items[i][2];
-            add.innerHTML = 'add';
-            typeBox.type = 'number';
-            }
-    }
+         var ele = document.createElement('li');
+         var pic = document.createElement('img');
+         var price = document.createElement('h1');
+         var desc = document.createElement('h2');
+         var add = document.createElement('button');
+         var typeBox = document.createElement('input');
 
 
 
+         // Push elements into html
+         main.appendChild(ele);
+         ele.appendChild(pic);
+         ele.appendChild(price);
+         ele.appendChild(desc);
+         ele.appendChild(add);
+         ele.appendChild(typeBox);
+
+         //edit pusher elements info from array
+
+         pic.src = items[i][0];
+         price.innerHTML = '$' + items[i][1];
+         desc.innerHTML = items[i][2];
+         add.innerHTML = 'add';
+         typeBox.type = 'number';
+
+         typeBox.setAttribute("id", "input" + i);
+         typeBox.value = 1;
+
+         add.dataset.cartIndex = i;
+         add.addEventListener('click', adding, false);
+     }
+
+     function adding(event) {
+         const NUM = event.currentTarget.dataset.cartIndex;
+
+         cartItems.push([items[NUM]]);
+         cartItems[cartItems.length - 1][1] = Number(document.getElementById('input' + NUM).value);
+
+         updateCart();
+     }
+
+     var totalItems = 0;
+
+     function updateCart() {
+         var itemCounter = document.getElementById('itemCount');
+
+         totalItems = 0;
+         for (var i = 0; i < cartItems.length; i++) {
+             totalItems += cartItems[i][1];
+
+         }
+
+         itemCounter.innerHTML = totalItems;
+     }
+ }
 </script>
+
+
 <body onload="run()">
+    <nav>
+        <a href="L2Index.html">Home</a>
+        <a href="L2Products.html">Cart</a>
+    
+    </nav>
+    <h1>Cart Items:</h1>
+    <h2 id='itemCount'>0</h2>
+    
     <ul id="products">
-    
-    
+
     </ul>
 
 </body>

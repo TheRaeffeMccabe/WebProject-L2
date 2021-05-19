@@ -17,7 +17,7 @@ body {
 p1 {
     grid-column: 2/4;
     grid-row: 1/2;
-    background-color: #916860;
+    background-color: #8a8591;
     border-radius: 8px;
     height: 130px;
 /*    First paragraph*/
@@ -25,7 +25,7 @@ p1 {
 }
 
 p2 {
-    background-color: #8a8591;
+    background-color: #6e6fde;
     border-radius: 8px;
     grid-row: 3/4;
     grid-column: 2/3;
@@ -34,7 +34,7 @@ p2 {
 }
 
 p3 {
-    background-color: #6e6fde;
+    background-color: #8089dc;
     border-radius: 8px;
     grid-column: 3/4;
     grid-row: 3/4;
@@ -57,7 +57,7 @@ nav1 {
 }
 
 nav2 {
-    background-color: #8a8591;
+    background-color: #835c54;
     border-radius: 8px;
     justify-self: center;
     grid-row: 2/3;
@@ -65,7 +65,6 @@ nav2 {
     width: 180px;
     height: 100px;
     font-size: 80px;
-    
 /*    Next product*/
 
 }
@@ -91,3 +90,4 @@ nav2 {
     
     
 }
+
